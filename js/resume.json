@@ -1,0 +1,18 @@
+{
+  "firstName": "Bruno",
+  "lastName": "Carvalho",
+  "address": {
+    "city": "Armação dos Búzios",
+    "state": "Rio de Janeiro",
+    "country": "Brazil",
+    "zip": "28950-855"
+  },
+  "email": "brunobzs@gmail.com",
+  "about": "My expertise in automation and data validation frameworks enables me to deliver scalable solutions and ensure seamless user experiences. Using agile methodologies and advanced tools, I help optimize performance, increase productivity, and reduce risk throughout the development cycle.",
+  "social": {
+    "linkedIn": "https://www.linkedin.com/in/brunocarvalhoeng",
+    "github": "https://www.github.com/brunobzs",
+    "facebook": "https://www.facebook.com/brunocarvalhoeng",
+    "twitter": "https://www.twitter.com/brunobzs"
+  }
+}
