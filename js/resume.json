@@ -38,7 +38,7 @@
       "title": "QA Engineer Jr.",
       "company": "io.insure",
       "location": "EUA, Australia and UK",
-      "startDate": "April 2022",
+      "startDate": "January 2022",
       "endDate": "April 2023",
       "description": "I worked as a QA Analyst, focusing on ensuring the quality of our web applications. I worked side by side with the R&D team, testing our apps to deliver the best possible experience to users.",
       "isCurrent": false
@@ -71,7 +71,8 @@
       "bitbucket": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original-wordmark.svg",
       "jira": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg",
       "git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-      "linux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+      "linux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+      "docker": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
     },
     "workflow": {
       "1": "Test Automations, Playwright & Cypress",
