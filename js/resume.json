@@ -75,9 +75,10 @@
     },
     "workflow": {
       "1": "Test Automations, Playwright & Cypress",
-      "2": "Cross Browser Testing & Debugging",
-      "3": "CI/CD & Jenkins",
-      "4": "Agile Development & Scrum"
+      "2": "Mobile Test, iOS & Android",
+      "3": "Cross Browser Testing & Debugging",
+      "4": "CI/CD & Jenkins",
+      "5": "Agile Development & Scrum"
     }
   },
   "certifications": {
