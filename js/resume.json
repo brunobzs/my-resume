@@ -9,11 +9,12 @@
   },
   "email": "brunobzs@gmail.com",
   "about": "My expertise in automation and data validation frameworks enables me to deliver scalable solutions and ensure seamless user experiences. Using agile methodologies and advanced tools, I help optimize performance, increase productivity, and reduce risk throughout the development cycle.",
-  "socialMedia": {
+  "links": {
     "linkedin": "https://www.linkedin.com/in/brunocarvalhoeng",
     "github": "https://www.github.com/brunobzs",
     "facebook": "https://www.facebook.com/brunocarvalhoeng",
-    "twitter": ""
+    "twitter": "",
+    "download-file": "downloads/cv_bruno_carvalho.pdf"
   },
   "experiences": [
     {

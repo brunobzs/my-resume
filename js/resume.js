@@ -27,18 +27,18 @@
 async function loadJSONData() {
   try {
     const data = await fetch("js/resume.json");
-    const info = await data.json();
+    const resume = await data.json();
 
     // My Info
-    document.getElementById("firstname").textContent = info.firstName;
-    document.getElementById("lastname").textContent = info.lastName;
-    document.getElementById('address').textContent = `${info.address.city} · ${info.address.state}, ${info.address.country} · ${info.address.zip}`;
-    document.getElementById('email').textContent = info.email;
-    document.getElementById('email').href = `mailto:${info.email}`;
-    document.getElementById('about-me').textContent = info.about
+    document.getElementById("firstname").textContent = resume.firstName;
+    document.getElementById("lastname").textContent = resume.lastName;
+    document.getElementById('address').textContent = `${resume.address.city} · ${resume.address.state}, ${resume.address.country} · ${resume.address.zip}`;
+    document.getElementById('email').textContent = resume.email;
+    document.getElementById('email').href = `mailto:${resume.email}`;
+    document.getElementById('about-me').textContent = resume.about
 
     // Social Media
-    Object.entries(info.socialMedia).forEach(([key, url]) => {
+    Object.entries(resume.links).forEach(([key, url]) => {
       const element = document.getElementById(key);
       if (element) {
         if (url) {
@@ -51,7 +51,7 @@ async function loadJSONData() {
 
     // Experience
     const experienceList = document.getElementById("experience-list");
-    Object.entries(info.experiences).forEach((experience) => {
+    Object.entries(resume.experiences).forEach((experience) => {
       const { title, company, location, description, startDate, endDate, isCurrent } = experience[1];
       const experienceItem = document.createElement("div");
 
@@ -77,7 +77,7 @@ async function loadJSONData() {
 
     // Education
     const educationList = document.getElementById("education-list");
-    Object.entries(info.education).forEach((education) => {
+    Object.entries(resume.education).forEach((education) => {
       const { institution, degree, major, startDate, endDate } = education[1];
       const educationItem = document.createElement("div");
 
@@ -98,7 +98,7 @@ async function loadJSONData() {
 
     // Skills
     const skillsList = document.getElementById("skills-list");
-    Object.entries(info.skills.tools).forEach(([name, icon]) => {
+    Object.entries(resume.skills.tools).forEach(([name, icon]) => {
       const categoryElement = document.createElement("li");
 
       categoryElement.setAttribute("class", "list-inline-item");
@@ -108,7 +108,7 @@ async function loadJSONData() {
     });
 
     const workflow = document.getElementById("workflow");
-    Object.entries(info.skills.workflow).forEach((item) => {
+    Object.entries(resume.skills.workflow).forEach((item) => {
       const workflowItem = document.createElement("li");
 
       workflowItem.innerHTML = `
@@ -121,7 +121,7 @@ async function loadJSONData() {
 
     // Awards & Certifications
     const certificationsList = document.getElementById("certifications");
-    Object.entries(info.certifications).forEach((certification) => {
+    Object.entries(resume.certifications).forEach((certification) => {
       const certificationItem = document.createElement("li");
 
       certificationItem.innerHTML = `
