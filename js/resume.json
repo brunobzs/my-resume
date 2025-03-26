@@ -10,16 +10,19 @@
   "email": "brunobzs@gmail.com",
   "about": "My expertise in automation and data validation frameworks enables me to deliver scalable solutions and ensure seamless user experiences. Using agile methodologies and advanced tools, I help optimize performance, increase productivity, and reduce risk throughout the development cycle.",
   "links": {
+    "facebook": "",
+    "twitter": "",
     "linkedin": "https://www.linkedin.com/in/brunocarvalhoeng",
     "github": "https://www.github.com/brunobzs",
-    "facebook": "https://www.facebook.com/brunocarvalhoeng",
-    "twitter": "",
+    "whatsapp": "https://wa.me/5522988396545",
+    "telegram": "",
     "download-file": "downloads/cv_bruno_carvalho.pdf"
   },
   "experiences": [
     {
       "title": "Mobile QA Engineer",
       "company": "Personetics",
+      "webpage": "https://personetics.com",
       "location": "Rio de Janeiro, RJ - Brazil",
       "startDate": "April 2024",
       "endDate": "",
@@ -29,19 +32,21 @@
     {
       "title": "QA Engineer",
       "company": "Shaw and Partners",
+      "webpage": "https://shawandpartners.com/",
       "location": "Casper, WY - USA",
       "startDate": "May 2023",
       "endDate": "April 2024",
-      "description": "I worked as a QA Engineer, focusing on ensuring the quality of our web applications. I worked side by side with the R&D team, testing our apps to deliver the best possible experience to users.",
+      "description": "Ensure the excellence of the company's products or services. I am responsible for conducting manual and automated tests using Cypress. My tasks include creating test cases, monitoring bugs and analyzing wireframes to ensure product quality.",
       "isCurrent": false
     },
     {
       "title": "QA Engineer Jr.",
       "company": "io.insure",
+      "webpage": "https://io.insure/",
       "location": "EUA, Australia and UK",
       "startDate": "January 2022",
       "endDate": "April 2023",
-      "description": "I worked as a QA Analyst, focusing on ensuring the quality of our web applications. I worked side by side with the R&D team, testing our apps to deliver the best possible experience to users.",
+      "description": "Prevent errors or failures, avoid problems when delivering solutions, automate tests to increase efficiency, create comprehensive test cases, perform manual tests to identify bugs and validate business rules to ensure the correct functioning of the software. Ensure the quality of the final product.",
       "isCurrent": false
     }
   ],
@@ -68,32 +73,32 @@
       "cypress": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg",
       "playwright": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg",
       "jenkins": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
-      "github_actions": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
+      "github-actions": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
       "bitbucket": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original-wordmark.svg",
       "jira": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg",
       "git": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
       "linux": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
       "docker": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
     },
-    "workflow": {
-      "1": "Test Automations, Playwright & Cypress",
-      "2": "Mobile Test, iOS & Android",
-      "3": "Cross Browser Testing & Debugging",
-      "4": "CI/CD & Jenkins",
-      "5": "Agile Development & Scrum"
-    }
+    "workflow": [
+      "Test Automations, Playwright & Cypress",
+      "Mobile Test, iOS & Android",
+      "Cross Browser Testing & Debugging",
+      "CI/CD & Jenkins",
+      "Agile Development & Scrum"
+    ]
   },
-  "certifications": {
-    "1": "Alura - Learn Java with Object Orientation Training",
-    "2": "Alura - PostgreSQL",
-    "3": "Alura - Selenium: automated acceptance tests in Java",
-    "4": "Alura - Javascript Training for Front-end",
-    "5": "Alura - Javascript Training for Back-end",
-    "6": "Alura - Cypress: E2E test automation",
-    "7": "Alura - Career QA Training: test processes and automation",
-    "8": "Alura - Quality Assurance: test plan and bug management",
-    "9": "Alura - Django Training",
-    "10": "Alura - Python Training",
-    "11": "Alura - Automated testing: TDD with Python"
-  }
+  "certifications": [
+    "Alura - Learn Java with Object Orientation Training",
+    "Alura - PostgreSQL",
+    "Alura - Selenium: automated acceptance tests in Java",
+    "Alura - Javascript Training for Front-end",
+    "Alura - Javascript Training for Back-end",
+    "Alura - Cypress: E2E test automation",
+    "Alura - Career QA Training: test processes and automation",
+    "Alura - Quality Assurance: test plan and bug management",
+    "Alura - Django Training",
+    "Alura - Python Training",
+    "Alura - Automated testing: TDD with Python"
+  ]
 }

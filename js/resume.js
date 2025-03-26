@@ -37,7 +37,7 @@ async function loadJSONData() {
     document.getElementById('email').href = `mailto:${resume.email}`;
     document.getElementById('about-me').textContent = resume.about
 
-    // Social Media
+    // Links
     Object.entries(resume.links).forEach(([key, url]) => {
       const element = document.getElementById(key);
       if (element) {
@@ -50,9 +50,9 @@ async function loadJSONData() {
     });
 
     // Experience
-    const experienceList = document.getElementById("experience-list");
     Object.entries(resume.experiences).forEach((experience) => {
-      const { title, company, location, description, startDate, endDate, isCurrent } = experience[1];
+      const { title, company, webpage, location, description, startDate, endDate, isCurrent } = experience[1];
+      const experienceList = document.getElementById("experience-list");
       const experienceItem = document.createElement("div");
 
       experienceItem.innerHTML = `
@@ -60,7 +60,8 @@ async function loadJSONData() {
           <div class="resume-content mr-auto">
             <h3 id="experience-title" class="mb-0">${title}</h3>
             <div class="subheading mb-3">
-              <span>${company} · ${location}</span>
+              ${webpage ? `<a href="${webpage}" target="_blank">${company}</a>` : company}
+              <span> · ${location}</span>
             </div>
             <p id="description">${description}</p>
           </div>
@@ -76,9 +77,9 @@ async function loadJSONData() {
     });
 
     // Education
-    const educationList = document.getElementById("education-list");
     Object.entries(resume.education).forEach((education) => {
       const { institution, degree, major, startDate, endDate } = education[1];
+      const educationList = document.getElementById("education-list");
       const educationItem = document.createElement("div");
 
       educationItem.innerHTML = `
@@ -97,37 +98,31 @@ async function loadJSONData() {
     })
 
     // Skills
-    const skillsList = document.getElementById("skills-list");
     Object.entries(resume.skills.tools).forEach(([name, icon]) => {
-      const categoryElement = document.createElement("li");
+      const skillsList = document.getElementById("skills-list");
+      const skillItem = document.createElement("li");
 
-      categoryElement.setAttribute("class", "list-inline-item");
-      categoryElement.innerHTML = `<img alt="${name}" src="${icon}" width="40" height="40"/>`
+      skillItem.setAttribute("class", "list-inline-item");
+      skillItem.innerHTML = `<img alt="${name}" src="${icon}" width="40" height="40"/>`
 
-      skillsList.appendChild(categoryElement);
+      skillsList.appendChild(skillItem);
     });
 
-    const workflow = document.getElementById("workflow");
     Object.entries(resume.skills.workflow).forEach((item) => {
+      const workflowList = document.getElementById("workflow");
       const workflowItem = document.createElement("li");
 
-      workflowItem.innerHTML = `
-        <i class="fa-li fa fa-check"></i>
-        ${item[1]}
-      `;
+      workflowItem.innerHTML = `<i class="fa-li fa fa-check"></i>${item[1]}`;
 
-      workflow.appendChild(workflowItem);
+      workflowList.appendChild(workflowItem);
     });
 
     // Awards & Certifications
-    const certificationsList = document.getElementById("certifications");
     Object.entries(resume.certifications).forEach((certification) => {
+      const certificationsList = document.getElementById("certifications");
       const certificationItem = document.createElement("li");
 
-      certificationItem.innerHTML = `
-        <i class="fa-li fa fa-trophy text-warning"></i>
-        ${certification[1]}
-      `;
+      certificationItem.innerHTML = `<i class="fa-li fa fa-trophy text-warning"></i>${certification[1]}`;
 
       certificationsList.appendChild(certificationItem);
     })
