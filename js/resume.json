@@ -88,6 +88,56 @@
       "Agile Development & Scrum"
     ]
   },
+  "projects": [
+    {
+      "name": "Cypress test automation",
+      "description": "Test automation project developed with Cypress and TypeScript.",
+      "image": "https://docs.cypress.io/img/app/get-started/real-world-app.png",
+      "repository": "https://github.com/brunobzs/cypress-test-automation",
+      "demo": "https://cloud.cypress.io/projects/8zypge",
+      "technologies": ["Cypress", "TypeScript", "Page Object Model", "Test Automation"]
+    },
+    {
+      "name": "Cypress API test",
+      "description": "Automated API Testing with Cypress to check requests.",
+      "image": "https://fleekitsolutions.com/wp-content/uploads/2023/09/Codeless-automation-using-Selenium-IDE-2-1.png",
+      "repository": "https://github.com/brunobzs/cypress-api-test",
+      "demo": "https://cloud.cypress.io/projects/q56pho",
+      "technologies": ["JavaScript", "Cypress", "API tests", "Test Automation"]
+    },
+    {
+      "name": "Cypress with Cucumber",
+      "description": "Gherkin in testing to explore Cypress integration with Cucumber.",
+      "image": "https://www.perfecto.io/sites/default/files/image/2021-02/image-blog-cypress-cucumber.jpg",
+      "repository": "https://github.com/brunobzs/cypress-with-cucumber",
+      "demo": "",
+      "technologies": ["TypeScript", "Gherkin", "Cypress", "Cucumber", "Test Automation"]
+    },
+    {
+      "name": "Playwright test automation",
+      "description": "Test automation project developed with Playwright and TypeScript",
+      "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2025/03/playwright-browsers.jpg",
+      "repository": "https://github.com/brunobzs/playwright-test-automation",
+      "demo": "",
+      "technologies": ["TypeScript", "Node.js", "Playwright", "Test Automation"]
+    },
+    {
+      "name": "Playwright API test",
+      "description": "This project uses Playwright to perform automated tests on the ServRest API.",
+      "image": "https://i.ytimg.com/vi/0YjBX6BCJDw/maxresdefault.jpg",
+      "repository": "https://github.com/brunobzs/playwright-api-test",
+      "demo": "",
+      "technologies": ["Playwright", "JavaScript", "Node.js", "API tests"]
+    },
+    {
+      "name": "Brainstorm AI",
+      "description": "Brainstorm AI is a project that uses Google AI API to create virtual assistants and perform fast and accurate searches.",
+      "image": "https://miro.medium.com/v2/resize:fit:3840/1*gUGzH6_4kThr62qqBX7lrw.jpeg",
+      "repository": "https://github.com/brunobzs/brainstorm-ai",
+      "demo": "https://brunobzs.github.io/brainstorm-ai/",
+      "technologies": ["HTML", "JavaScript", "Node.js", "CSS"]
+    }
+  ],
   "certifications": [
     "Alura - Learn Java with Object Orientation Training",
     "Alura - PostgreSQL",

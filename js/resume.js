@@ -24,6 +24,40 @@
 
 })(jQuery);
 
+async function renderProjects(projects) {
+  const projectsList = document.getElementById("projects-list");
+
+  projects.forEach(project => {
+    const projectCard = document.createElement("div");
+    projectCard.className = "col-md-6 col-lg-4 project-card";
+
+    projectCard.innerHTML = `
+      <div class="card">
+        <img src="${project.image}" class="card-img-top" alt="${project.name}">
+        <div class="card-body">
+          <h5 class="card-title">${project.name}</h5>
+          <p class="card-text">${project.description}</p>
+          <div class="project-technologies">
+            ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
+          </div>
+          <div class="mt-3">
+            <a href="${project.repository}" class="btn btn-primary" target="_blank">
+              <i class="fa fa-github"></i> Repository
+            </a>
+            ${project.demo ? `
+              <a href="${project.demo}" class="btn btn-secondary" target="_blank">
+                <i class="fa fa-external-link"></i> Demo
+              </a>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+    `;
+
+    projectsList.appendChild(projectCard);
+  });
+}
+
 async function loadJSONData() {
   try {
     const data = await fetch("js/resume.json");
@@ -116,6 +150,11 @@ async function loadJSONData() {
 
       workflowList.appendChild(workflowItem);
     });
+
+    // Projects
+    if (resume.projects) {
+      renderProjects(resume.projects);
+    }
 
     // Awards & Certifications
     Object.entries(resume.certifications).forEach((certification) => {
