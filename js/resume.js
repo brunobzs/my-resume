@@ -153,7 +153,7 @@ async function loadJSONData() {
 
     // Projects
     if (resume.projects) {
-      renderProjects(resume.projects);
+      await renderProjects(resume.projects);
     }
 
     // Awards & Certifications
