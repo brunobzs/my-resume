@@ -108,7 +108,7 @@
     {
       "name": "Cypress with Cucumber",
       "description": "Gherkin in testing to explore Cypress integration with Cucumber.",
-      "image": "https://www.perfecto.io/sites/default/files/image/2021-02/image-blog-cypress-cucumber.jpg",
+      "image": "https://testomat.io/wp-content/uploads/2024/01/E2E_tests_with_Cypress__Cucumber.png",
       "repository": "https://github.com/brunobzs/cypress-with-cucumber",
       "demo": "",
       "technologies": ["TypeScript", "Gherkin", "Cypress", "Cucumber", "Test Automation"]
