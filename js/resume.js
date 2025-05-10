@@ -123,36 +123,63 @@ function renderSkills({ tools, workflow }) {
 
 function renderProjects(projects) {
   const projectsList = document.getElementById("projects-list");
+  const maxVisible = 6;
+  let showingAll = false;
 
-  projects.forEach(project => {
-    const projectCard = document.createElement("div");
-    projectCard.className = "col-md-6 col-lg-4 project-card";
-
-    projectCard.innerHTML = `
-      <div class="card">
-        <img src="${project.image}" class="card-img-top" alt="${project.name}">
-        <div class="card-body">
-          <h5 class="card-title">${project.name}</h5>
-          <p class="card-text">${project.description}</p>
-          <div class="project-technologies">
-            ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
-          </div>
-          <div class="mt-3">
-            <a href="${project.repository}" class="btn btn-primary" target="_blank">
-              <i class="fa fa-github"></i> Repository
-            </a>
-            ${project.demo ? `
-              <a href="${project.demo}" class="btn btn-secondary" target="_blank">
-                <i class="fa fa-external-link"></i> Demo
+  function renderHTML (visibleCount) {
+    projectsList.innerHTML = "";
+    projects.slice(0, visibleCount).forEach(project => {
+      const projectCard = document.createElement("div");
+      projectCard.className = "col-md-6 col-lg-4 project-card";
+      projectCard.innerHTML = `
+        <div class="card">
+          <img src="${project.image}" class="card-img-top" alt="${project.name}">
+          <div class="card-body">
+            <h5 class="card-title">${project.name}</h5>
+            <p class="card-text">${project.description}</p>
+            <div class="project-technologies">
+              ${project.technologies.map(tech => `<span>${tech}</span>`).join('')}
+            </div>
+            <div class="mt-3">
+              <a href="${project.repository}" class="btn btn-primary" target="_blank">
+                <i class="fa fa-github"></i> Repository
               </a>
-            ` : ''}
+              ${project.demo ? `
+                <a href="${project.demo}" class="btn btn-secondary" target="_blank">
+                  <i class="fa fa-external-link"></i> Demo
+                </a>
+              ` : ''}
+            </div>
           </div>
         </div>
-      </div>
-    `;
+      `;
+      projectsList.appendChild(projectCard);
+    });
+  }
 
-    projectsList.appendChild(projectCard);
-  });
+  renderHTML(maxVisible)
+
+  const button = document.getElementById("projects-show-more-btn");
+  if (button) button.remove();
+
+  if (projects.length > maxVisible) {
+    const showMoreBtn = document.createElement("button");
+    showMoreBtn.id = "projects-show-more-btn";
+    showMoreBtn.textContent = "Show more";
+    showMoreBtn.onclick = function() {
+      showingAll = !showingAll;
+      if (showingAll) {
+        renderHTML(projects.length);
+        showMoreBtn.textContent = "Show less";
+      } else {
+        renderHTML(maxVisible);
+        showMoreBtn.textContent = "Show more";
+        // Scroll para a seção de projetos ao esconder
+        projectsList.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    projectsList.parentElement.appendChild(showMoreBtn);
+  }
 }
 
 function renderCertifications(certifications) {
