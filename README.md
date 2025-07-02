@@ -86,7 +86,7 @@ my-resume/
 ├── downloads/            # Downloadable files (PDF resume)
 ├── img/                  # Images including profile picture
 ├── js/                   # JavaScript files
-│   ├── resume.js         # Main JavaScript functionality
+│   ├── index.js         # Main JavaScript functionality
 │   └── resume.json       # Resume data
 ├── scss/                 # SCSS source files
 ├── vendor/               # Third-party libraries
