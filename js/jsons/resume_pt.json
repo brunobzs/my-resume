@@ -4,11 +4,11 @@
   "address": {
     "city": "Armação dos Búzios",
     "state": "Rio de Janeiro",
-    "country": "Brazil",
+    "country": "Brasil",
     "zip": "28950-855"
   },
   "email": "brunobzs@gmail.com",
-  "about": "My expertise in automation and data validation frameworks enables me to deliver scalable solutions and ensure seamless user experiences. Using agile methodologies and advanced tools, I help optimize performance, increase productivity, and reduce risk throughout the development cycle.",
+  "about": "Minha expertise em frameworks de automação e validação de dados me permite entregar soluções escaláveis \u200B\u200Be garantir experiências perfeitas para o usuário. Utilizando metodologias ágeis e ferramentas avançadas, ajudo a otimizar o desempenho, aumentar a produtividade e reduzir riscos em todo o ciclo de desenvolvimento.",
   "links": {
     "facebook": "",
     "twitter": "",
@@ -16,52 +16,52 @@
     "github": "https://www.github.com/brunobzs",
     "whatsapp": "https://wa.me/5522988396545",
     "telegram": "",
-    "download-file": "downloads/cv_bruno_carvalho_en.pdf"
+    "download-file": "downloads/cv_bruno_carvalho_pt.pdf"
   },
   "experiences": [
     {
       "title": "QA Automation Engineer",
       "company": "Personetics",
       "webpage": "https://personetics.com",
-      "location": "Rio de Janeiro, RJ - Brazil",
-      "startDate": "April 2024",
+      "location": "Rio de Janeiro, RJ - Brasil",
+      "startDate": "Abril 2024",
       "endDate": "",
-      "description": "I work as a Mobile QA Engineer, focusing on ensuring the quality of our mobile applications. I work side by side with the R&D team, testing our apps on iOS and Android to deliver the best possible experience to users.",
+      "description": "Trabalho como Engenheiro de Garantia da Qualidade Mobile, com foco em garantir a qualidade dos nossos aplicativos mobile. Trabalho lado a lado com a equipe de P&D, testando nossos aplicativos em iOS e Android para oferecer a melhor experiência possível aos usuários.",
       "isCurrent": true
     },
     {
       "title": "QA Engineer",
       "company": "Shaw and Partners",
       "webpage": "https://shawandpartners.com/",
-      "location": "Casper, WY - USA",
-      "startDate": "May 2023",
-      "endDate": "April 2024",
-      "description": "Ensure the excellence of the company's products or services. I am responsible for conducting manual and automated tests using Cypress. My tasks include creating test cases, monitoring bugs and analyzing wireframes to ensure product quality.",
+      "location": "Casper, WY - EUA",
+      "startDate": "Maio 2023",
+      "endDate": "Abril 2024",
+      "description": "Garantir a excelência dos produtos ou serviços da empresa. Fui responsável por conduzir testes manuais e automatizados utilizando o Cypress. Minhas tarefas incluem criar casos de teste, monitorar bugs e analisar wireframes para garantir a qualidade do produto.",
       "isCurrent": false
     },
     {
       "title": "QA Engineer Jr.",
       "company": "io.insure",
       "webpage": "https://io.insure/",
-      "location": "USA, Australia and UK",
-      "startDate": "January 2022",
+      "location": "EUA, Australia e Reino Unido",
+      "startDate": "Janeiro 2022",
       "endDate": "April 2023",
-      "description": "Prevent errors or failures, avoid problems when delivering solutions, automate tests to increase efficiency, create comprehensive test cases, perform manual tests to identify bugs and validate business rules to ensure the correct functioning of the software. Ensure the quality of the final product.",
+      "description": "Previnir erros ou falhas, evitar problemas na entrega de soluções, automatizar testes para aumentar a eficiência, criar casos de teste abrangentes, realizar testes manuais para identificar bugs e validar regras de negócio para garantir o funcionamento correto do software, garantindo a qualidade do produto final.",
       "isCurrent": false
     }
   ],
   "education": [
     {
-      "degree": "Production Engineer",
-      "institution": "Veiga de Almeida University",
-      "startDate": "July 2008",
-      "endDate": "December 2014"
+      "degree": "Engenharia de Produção",
+      "institution": "Universidade Veiga de Almeida",
+      "startDate": "Julho 2008",
+      "endDate": "Dezembro 2014"
     },
     {
-      "degree": "Postgraduate in Software Engineering",
-      "institution": "Estácio de Sá University",
-      "startDate": "January 2022",
-      "endDate": "December 2022"
+      "degree": "Pós-Graduação em Engenharia de Software",
+      "institution": "Universidade Estácio de Sá",
+      "startDate": "Janeiro 2022",
+      "endDate": "Dezembro 2022"
     }
   ],
   "skills": {
@@ -81,9 +81,9 @@
       "docker": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
     },
     "workflow": [
-      "Test Automations, Playwright & Cypress",
-      "Mobile Test, iOS & Android",
-      "Cross Browser Testing & Debugging",
+      "Automação de Testes, Playwright & Cypress",
+      "Testes Mobile, iOS & Android",
+      "Testes Cross Browser & Debugging",
       "CI/CD & Jenkins",
       "Agile Development & Scrum"
     ]
@@ -91,7 +91,7 @@
   "projects": [
     {
       "name": "Cypress test automation",
-      "description": "Test automation project developed with Cypress and TypeScript.",
+      "description": "Projeto de automação de testes desenvolvido com Cypress e TypeScript.",
       "image": "https://docs.cypress.io/img/app/get-started/real-world-app.png",
       "repository": "https://github.com/brunobzs/cypress-test-automation",
       "demo": "https://cloud.cypress.io/projects/8zypge",
@@ -99,7 +99,7 @@
     },
     {
       "name": "Cypress API test",
-      "description": "Automated API Testing with Cypress to check requests.",
+      "description": "Testes automatizados de API com Cypress para verificar solicitações.",
       "image": "https://fleekitsolutions.com/wp-content/uploads/2023/09/Codeless-automation-using-Selenium-IDE-2-1.png",
       "repository": "https://github.com/brunobzs/cypress-api-test",
       "demo": "https://cloud.cypress.io/projects/q56pho",
@@ -107,7 +107,7 @@
     },
     {
       "name": "Cypress with Cucumber",
-      "description": "Gherkin in testing to explore Cypress integration with Cucumber.",
+      "description": "Gherkin em testes para explorar a integração do Cypress com o Cucumber.",
       "image": "https://testomat.io/wp-content/uploads/2024/01/E2E_tests_with_Cypress__Cucumber.png",
       "repository": "https://github.com/brunobzs/cypress-with-cucumber",
       "demo": "",
@@ -115,7 +115,7 @@
     },
     {
       "name": "Playwright test automation",
-      "description": "Test automation project developed with Playwright and TypeScript",
+      "description": "Projeto de automação de testes desenvolvido com Playwright e TypeScript",
       "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2025/03/playwright-browsers.jpg",
       "repository": "https://github.com/brunobzs/playwright-test-automation",
       "demo": "",
@@ -123,7 +123,7 @@
     },
     {
       "name": "Playwright API test",
-      "description": "This project uses Playwright to perform automated tests on the ServRest API.",
+      "description": "Este projeto usa o Playwright para realizar testes automatizados na API ServRest.",
       "image": "https://i.ytimg.com/vi/0YjBX6BCJDw/maxresdefault.jpg",
       "repository": "https://github.com/brunobzs/playwright-api-test",
       "demo": "",
@@ -131,7 +131,7 @@
     },
     {
       "name": "Brainstorm AI",
-      "description": "Brainstorm AI is a project that uses Google AI API to create virtual assistants and perform fast and accurate searches.",
+      "description": "O Brainstorm AI é um projeto que usa a API de IA do Google para criar assistentes virtuais e realizar pesquisas rápidas e precisas.",
       "image": "https://miro.medium.com/v2/resize:fit:3840/1*gUGzH6_4kThr62qqBX7lrw.jpeg",
       "repository": "https://github.com/brunobzs/brainstorm-ai",
       "demo": "https://brunobzs.github.io/brainstorm-ai/",
@@ -139,16 +139,16 @@
     }
   ],
   "certifications": [
-    "Alura - Learn Java with Object Orientation Training",
+    "Alura - Aprenda Java com treinamento em orientação a objetos",
     "Alura - PostgreSQL",
-    "Alura - Selenium: automated acceptance tests in Java",
-    "Alura - Javascript Training for Front-end",
-    "Alura - Javascript Training for Back-end",
-    "Alura - Cypress: E2E test automation",
-    "Alura - Career QA Training: test processes and automation",
-    "Alura - Quality Assurance: test plan and bug management",
-    "Alura - Django Training",
-    "Alura - Python Training",
-    "Alura - Automated testing: TDD with Python"
+    "Alura - Selenium: testes de aceitação automatizados em Java",
+    "Alura - Curso Javascript para Front-end",
+    "Alura - Curso Javascript para Back-end",
+    "Alura - Cypress: Automação de testes E2E",
+    "Alura - Treinamento de QA de carreira: processos de teste e automação",
+    "Alura - Garantia de qualidade: plano de teste e gerenciamento de bugs",
+    "Alura - Curso Django",
+    "Alura - Curso Python",
+    "Alura - Testes Automatizados: TDD com Python"
   ]
 }

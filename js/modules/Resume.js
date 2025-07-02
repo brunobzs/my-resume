@@ -221,4 +221,13 @@ export default class Resume {
       console.error('Error loading JSON data:', error);
     }
   }
+
+  clearElements() {
+    document.getElementById("experience-list").innerHTML = '';
+    document.getElementById("education-list").innerHTML = '';
+    document.getElementById("skills-list").innerHTML = '';
+    document.getElementById("workflow").innerHTML = '';
+    document.getElementById("projects-list").innerHTML = '';
+    document.getElementById("certifications").innerHTML = '';
+  }
 }

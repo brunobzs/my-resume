@@ -1,4 +1,5 @@
 import Resume from "./modules/Resume.js";
+import Translate from "./modules/Translate.js";
 
 (function($) {
   "use strict";
@@ -26,7 +27,27 @@ import Resume from "./modules/Resume.js";
 
 })(jQuery);
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const resume = new Resume();
-  await resume.loadJSONData("js/jsons/resume_en.json");
-})
+const resume = new Resume();
+const translate = new Translate();
+const jsonPath = (language) => `js/jsons/resume_${language}.json`
+let currentLanguage = 'en';
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
+  translate.selectorButtonTextContent(currentLanguage);
+
+  return currentLanguage;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  translate.selectorButtonTextContent(currentLanguage);
+  await resume.loadJSONData(jsonPath("en"));
+});
+
+document.getElementById('languageToggle').addEventListener('click', async () => {
+  const language = toggleLanguage();
+
+  resume.clearElements();
+  translate.renderPageTranslated(language);
+  await resume.loadJSONData(jsonPath(language));
+});

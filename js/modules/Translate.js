@@ -33,7 +33,7 @@ export default class Translate {
     document.getElementById('experience-title').textContent = this.translation[language].experience;
     document.getElementById('education-title').textContent = this.translation[language].education;
     document.getElementById('skills-title').textContent = this.translation[language].skills;
-    document.getElementById('skills-title-tools').textContent = language === 'en' ? 'Programming Languages & Tools' : 'Linguagens & Ferramentas';
+    document.getElementById('skills-tools-title').textContent = language === 'en' ? 'Programming Languages & Tools' : 'Linguagens & Ferramentas';
     document.getElementById('projects-title').textContent = this.translation[language].projects;
     document.getElementById('awards-title').textContent = language === 'en'? `${this.translation[language].awards} & Certifications` : this.translation[language].awards;
   }
