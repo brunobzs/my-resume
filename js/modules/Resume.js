@@ -1,4 +1,15 @@
 export default class Resume {
+  /**
+   * Render the "About Me" section of the resume.
+   * @param {string} firstName - The first name of the person.
+   * @param {string} lastName - The last name of the person.
+   * @param {string} city - The city where the person lives.
+   * @param {string} state - The state where the person lives.
+   * @param {string} country - The country where the person lives.
+   * @param {string} zipcode - The postal code of the person's address.
+   * @param {string} email - The email address of the person.
+   * @param {string} about - A brief description about the person.
+   */
   renderAboutMe({ firstName, lastName, city, state, country, zipcode, email, about }) {
     document.getElementById("firstname").textContent = firstName;
     document.getElementById("lastname").textContent = lastName;
@@ -8,6 +19,10 @@ export default class Resume {
     document.getElementById('about-me').textContent = about
   }
 
+  /**
+   * Render the links in the "My Links" section of the resume.
+   * @param {Object} links - An object containing key-value pairs where keys are element IDs and values are URLs.
+   */
   renderMyLinks(links) {
     Object.entries(links).forEach(([key, url]) => {
       const element = document.getElementById(key);
@@ -22,6 +37,10 @@ export default class Resume {
     });
   }
 
+  /**
+   * Render the experiences in the "Experience" section of the resume.
+   * @param {Array} experiences - An array of experience objects, each containing details like title, company, webpage, location, description, startDate, endDate, and isCurrent.
+   */
   renderExperiences(experiences) {
     Object.entries(experiences).forEach((experience) => {
       const experienceList = document.getElementById("experience-list");
@@ -50,6 +69,10 @@ export default class Resume {
     });
   }
 
+  /**
+   * Render the education details in the "Education" section of the resume.
+   * @param {Array} education - An array of education objects, each containing details like institution, degree, major, startDate, and endDate.
+   */
   renderEducation(education) {
     Object.entries(education).forEach((education) => {
       const { institution, degree, major, startDate, endDate } = education[1];
@@ -72,6 +95,11 @@ export default class Resume {
     })
   }
 
+  /**
+   * Render the skills in the "Skills" section of the resume.
+   * @param {Object} tools - An object containing key-value pairs where keys are skill names and values are their corresponding icons.
+   * @param {Array} workflow - An array of strings representing the workflow or methodologies used.
+   */
   renderSkills({ tools, workflow }) {
     if(tools) {
       Object.entries(tools).forEach(([name, icon]) => {
@@ -96,6 +124,10 @@ export default class Resume {
     }
   }
 
+  /**
+   * Render the projects in the "Projects" section of the resume.
+   * @param {Array} projects - An array of project objects, each containing details like name, image, description, technologies, repository, and demo.
+   */
   renderProjects(projects) {
     const projectsList = document.getElementById("projects-list");
     const maxVisible = 6;
@@ -157,6 +189,10 @@ export default class Resume {
     }
   }
 
+  /**
+   * Render the certifications in the "Certifications" section of the resume.
+   * @param {Array} certifications - An array of certification names.
+   */
   renderCertifications(certifications) {
     Object.entries(certifications).forEach((certification) => {
       const certificationsList = document.getElementById("certifications");
@@ -168,6 +204,10 @@ export default class Resume {
     })
   }
 
+  /**
+   * Load JSON data from a file and render the resume sections.
+   * @param {String} jsonFile - The path to the JSON file containing resume data.
+   */
   async loadJSONData(jsonFile) {
     try {
       const file = await fetch(jsonFile);
@@ -222,6 +262,9 @@ export default class Resume {
     }
   }
 
+  /**
+   * Clear all elements in the resume sections.
+   */
   clearElements() {
     document.getElementById("experience-list").innerHTML = '';
     document.getElementById("education-list").innerHTML = '';
