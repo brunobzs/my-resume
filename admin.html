@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Panel | Bruno Carvalho</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+  </head>
+  <body>
+  <div id="loginScreen" class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <i class="fas fa-user-shield fa-3x mb-3"></i>
+        <h3>Admin Login</h3>
+        <p class="mb-0">Resume Management Panel</p>
+      </div>
+      <div class="login-body">
+        <form id="loginForm">
+          <div class="form-group mb-3">
+            <label class="form-label">
+              <i class="fas fa-user me-2"></i>Username
+            </label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label">
+              <i class="fas fa-lock me-2"></i>Password
+            </label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-sign-in-alt me-2"></i>Login
+            </button>
+          </div>
+        </form>
+        <div id="loginError" class="alert alert-danger mt-3 hidden">
+          Invalid credentials. Please try again.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <div class="overlay" id="overlay"></div>
+
+    <nav class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h4><i class="fas fa-cog me-2"></i>Admin Panel</h4>
+        <p class="mb-0">Bruno Carvalho</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#" data-section="overview" class="active"><i class="fas fa-tachometer-alt me-2"></i>Overview</a></li>
+        <li><a href="#" data-section="about"><i class="fas fa-user me-2"></i>About</a></li>
+        <li><a href="#" data-section="experience"><i class="fas fa-briefcase me-2"></i>Experience</a></li>
+        <li><a href="#" data-section="education"><i class="fas fa-graduation-cap me-2"></i>Education</a></li>
+        <li><a href="#" data-section="skills"><i class="fas fa-code me-2"></i>Skills</a></li>
+        <li><a href="#" data-section="projects"><i class="fas fa-project-diagram me-2"></i>Projects</a></li>
+        <li><a href="#" data-section="certifications"><i class="fas fa-certificate me-2"></i>Certifications</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content" id="mainContent">
+      <nav class="top-navbar">
+        <div>
+          <button class="btn btn-outline-primary" id="toggleSidebar">
+            <i class="fas fa-bars"></i>
+          </button>
+          <span class="ms-3 fw-bold" id="sectionTitle">Overview</span>
+        </div>
+        <div>
+          <button class="btn btn-outline-danger" id="logoutBtn">
+            <i class="fas fa-sign-out-alt me-2"></i>Logout
+          </button>
+        </div>
+      </nav>
+
+      <div class="content-area">
+        <div id="overviewSection" class="content-section">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="stats-card text-center">
+                <div class="stats-number" id="experienceCount">0</div>
+                <div>Experiences</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stats-card text-center">
+                <div class="stats-number" id="projectCount">0</div>
+                <div>Projects</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stats-card text-center">
+                <div class="stats-number" id="skillCount">0</div>
+                <div>Skills</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="stats-card text-center">
+                <div class="stats-number" id="certCount">0</div>
+                <div>Certifications</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-info-circle me-2"></i>Quick Actions
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-primary w-100" onclick="switchSection('about')">
+                    <i class="fas fa-user me-2"></i>Update About Info
+                  </button>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <button class="btn btn-success w-100" onclick="switchSection('projects')">
+                    <i class="fas fa-plus me-2"></i>Add New Project
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="aboutSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-user me-2"></i>Personal Information
+            </div>
+            <div class="card-body">
+              <form id="aboutForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="firstName">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="lastName">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">About Me</label>
+                  <textarea class="form-control" rows="4" id="aboutMe"></textarea>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">City</label>
+                      <input type="text" class="form-control" id="city">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">State</label>
+                      <input type="text" class="form-control" id="state">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">Country</label>
+                      <input type="text" class="form-control" id="country">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label">ZIP Code</label>
+                      <input type="text" class="form-control" id="zipCode">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success">
+                  <i class="fas fa-save me-2"></i>Save Changes
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="experienceSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span><i class="fas fa-briefcase me-2"></i>Work Experience</span>
+              <button class="btn btn-light btn-sm" id="addExperience">
+                <i class="fas fa-plus me-1"></i>Add Experience
+              </button>
+            </div>
+            <div class="card-body">
+              <div id="experienceList"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="projectsSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span><i class="fas fa-project-diagram me-2"></i>Projects</span>
+              <button class="btn btn-light btn-sm" id="addProject">
+                <i class="fas fa-plus me-1"></i>Add Project
+              </button>
+            </div>
+            <div class="card-body">
+              <div id="projectsList"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="skillsSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-code me-2"></i>Skills & Technologies
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label">Workflow Items (one per line)</label>
+                <textarea class="form-control" rows="8" id="workflowItems" placeholder="Test Automations, Playwright & Cypress&#10;Mobile Test, iOS & Android&#10;Cross Browser Testing & Debugging"></textarea>
+              </div>
+              <button type="button" class="btn btn-success" onclick="saveSkills()">
+                <i class="fas fa-save me-2"></i>Save Skills
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="certificationsSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header">
+              <i class="fas fa-certificate me-2"></i>Certifications & Awards
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label">Certifications (one per line)</label>
+                <textarea class="form-control" rows="10" id="certificationsList" placeholder="Alura - Learn Java with Object Orientation Training&#10;Alura - PostgreSQL&#10;Alura - Selenium: automated acceptance tests in Java"></textarea>
+              </div>
+              <button type="button" class="btn btn-success" onclick="saveCertifications()">
+                <i class="fas fa-save me-2"></i>Save Certifications
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="educationSection" class="content-section hidden">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span><i class="fas fa-graduation-cap me-2"></i>Education</span>
+              <button class="btn btn-light btn-sm" id="addEducation">
+                <i class="fas fa-plus me-1"></i>Add Education
+              </button>
+            </div>
+            <div class="card-body">
+              <div id="educationList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="js/admin.js" type="module"></script>
+  </body>
+</html>
