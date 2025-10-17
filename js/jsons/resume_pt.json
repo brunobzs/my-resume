@@ -20,14 +20,24 @@
   },
   "experiences": [
     {
+      "title": "QA Engineer",
+      "company": "Zoocha",
+      "webpage": "https://zoocha.com",
+      "location": "Balneário Camboriú, SC - Brasil",
+      "startDate": "Outubro 2024",
+      "endDate": "",
+      "description": "Atuo como QA focado em soluções web desenvolvidas em Drupal. Responsável por garantir a qualidade técnica e funcional de projetos digitais, desde a validação de arquitetura de conteúdo e permissões de acesso até testes de interface e responsividade. Trabalho integrado ao time de desenvolvimento para identificar, documentar e resolver bugs, assegurando entregas estáveis e aderentes aos requisitos do cliente.",
+      "isCurrent": true
+    },
+    {
       "title": "QA Automation Engineer",
       "company": "Personetics",
       "webpage": "https://personetics.com",
       "location": "Rio de Janeiro, RJ - Brasil",
       "startDate": "Abril 2024",
-      "endDate": "",
+      "endDate": "Outubro 2024",
       "description": "Trabalho como Engenheiro de Garantia da Qualidade Mobile, com foco em garantir a qualidade dos nossos aplicativos mobile. Trabalho lado a lado com a equipe de P&D, testando nossos aplicativos em iOS e Android para oferecer a melhor experiência possível aos usuários.",
-      "isCurrent": true
+      "isCurrent": false
     },
     {
       "title": "QA Engineer",
