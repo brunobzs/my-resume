@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Admin Panel</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; padding-top: 20px; }
+        .admin-container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .section-card { border: 1px solid #eee; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .section-title { border-bottom: 2px solid #BD5D38; padding-bottom: 10px; margin-bottom: 20px; color: #BD5D38; text-transform: uppercase; font-weight: bold; }
+        .item-row { background: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 10px; position: relative; }
+        .btn-remove { position: absolute; top: 10px; right: 10px; }
+        .sticky-bottom { position: sticky; bottom: 0; background: white; padding: 20px 0; border-top: 1px solid #eee; z-index: 100; }
+        #jsonOutput { white-space: pre-wrap; background: #272822; color: #f8f8f2; padding: 15px; border-radius: 5px; max-height: 400px; overflow-y: auto; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container admin-container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Resume Admin Panel</h1>
+            <a href="index.html" class="btn btn-outline-secondary"><i class="fa fa-arrow-left"></i> Back to Resume</a>
+        </div>
+
+        <div class="alert alert-info">
+            Use this panel to edit your resume data. When finished, click <strong>"Generate JSON"</strong> at the bottom, copy the content, and replace it in your <code>js/jsons/resume_en.json</code> or <code>resume_pt.json</code> files.
+        </div>
+
+        <form id="adminForm">
+            <!-- About Section -->
+            <div class="section-card">
+                <h3 class="section-title">About Me</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="firstName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control" name="address.city">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" name="address.state">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Country</label>
+                        <input type="text" class="form-control" name="address.country">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label">About Description</label>
+                        <textarea class="form-control" name="about" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="section-card">
+                <h3 class="section-title">Social Links</h3>
+                <div id="linksContainer" class="row">
+                    <!-- Links will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="section-card">
+                <h3 class="section-title">Experience</h3>
+                <div id="experienceList"></div>
+                <button type="button" class="btn btn-sm btn-primary mt-2" onclick="addExperience()">
+                    <i class="fa fa-plus"></i> Add Experience
+                </button>
+            </div>
+
+            <!-- Education Section -->
+            <div class="section-card">
+                <h3 class="section-title">Education</h3>
+                <div id="educationList"></div>
+                <button type="button" class="btn btn-sm btn-primary mt-2" onclick="addEducation()">
+                    <i class="fa fa-plus"></i> Add Education
+                </button>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="section-card">
+                <h3 class="section-title">Projects</h3>
+                <div id="projectsList"></div>
+                <button type="button" class="btn btn-sm btn-primary mt-2" onclick="addProject()">
+                    <i class="fa fa-plus"></i> Add Project
+                </button>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section-card">
+                <h3 class="section-title">Skills & Workflow</h3>
+                <div class="mb-3">
+                    <label class="form-label">Workflow (one per line)</label>
+                    <textarea class="form-control" name="skills.workflow" rows="5"></textarea>
+                </div>
+                <label class="form-label">Tools (Name: Icon URL)</label>
+                <div id="toolsList"></div>
+                <button type="button" class="btn btn-sm btn-primary mt-2" onclick="addTool()">
+                    <i class="fa fa-plus"></i> Add Tool
+                </button>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section-card">
+                <h3 class="section-title">Certifications</h3>
+                <div class="mb-3">
+                    <label class="form-label">Certifications (one per line)</label>
+                    <textarea class="form-control" name="certifications" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="sticky-bottom d-flex gap-3">
+                <button type="button" class="btn btn-success btn-lg flex-grow-1" onclick="generateJSON()">
+                    <i class="fa fa-code"></i> Generate JSON
+                </button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="copyJSON()" id="copyBtn" style="display:none;">
+                    <i class="fa fa-copy"></i> Copy JSON
+                </button>
+            </div>
+        </form>
+
+        <div id="jsonResult" class="mt-4">
+            <pre id="jsonOutput"></pre>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
