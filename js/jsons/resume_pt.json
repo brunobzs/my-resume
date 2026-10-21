@@ -20,14 +20,24 @@
   },
   "experiences": [
     {
+      "title": "QA Engineer Sênior",
+      "company": "Xebia",
+      "webpage": "https://xebia.com",
+      "location": "Bogotá - Colombia",
+      "startDate": "Outubro 2026",
+      "endDate": "",
+      "description": "Atuando como Senior QA Engineer na Xebia, consultoria global de tecnologia especializada em transformação digital, com foco em garantir qualidade e confiabilidade de software em projetos para clientes internacionais.",
+      "isCurrent": true
+    },
+    {
       "title": "QA Engineer",
       "company": "Zoocha",
       "webpage": "https://zoocha.com",
       "location": "Balneário Camboriú, SC - Brasil",
-      "startDate": "Outubro 2024",
-      "endDate": "",
+      "startDate": "Outubro 2025",
+      "endDate": "Outubro 2026",
       "description": "Atuo como QA focado em soluções web desenvolvidas em Drupal. Responsável por garantir a qualidade técnica e funcional de projetos digitais, desde a validação de arquitetura de conteúdo e permissões de acesso até testes de interface e responsividade. Trabalho integrado ao time de desenvolvimento para identificar, documentar e resolver bugs, assegurando entregas estáveis e aderentes aos requisitos do cliente.",
-      "isCurrent": true
+      "isCurrent": false
     },
     {
       "title": "QA Automation Engineer",
