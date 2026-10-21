@@ -1,0 +1,13 @@
+.git
+.idea
+.gitignore
+.assetsignore
+node_modules
+scss
+scripts
+CLAUDE.md
+README.md
+LICENSE
+package.json
+package-lock.json
+wrangler.jsonc
